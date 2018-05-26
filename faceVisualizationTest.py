@@ -29,10 +29,16 @@ def testFaceImage(urlin, imgout):
             if value > max:
                 biggest = key
                 max = value
-        print("I think this is: " + biggest + "\n")
+
+        if max > 0.80:
+            print("I'm sure this is " + biggest + " with "+ str(round(max * 100)) + "% accuracy\n")
+        elif max > 0.60:
+            print("I think this is " + biggest + " with "+ str(round(max * 100)) + "% accuracy\n")
+        else:
+            print("I'm guessing this is " + biggest + " with " + str(round(max * 100)) + "% accuracy\n")
 
     else:
-        print("This one was too tricky :/")
+        print("This one was too tricky :/ \n")
 
 
 print("Starting facial recognition tests...\n")
