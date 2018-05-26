@@ -37,3 +37,13 @@ pil_img.save(buff, format="JPEG")
 face64 = base64.b64encode(buff.getvalue()).decode("utf-8")
 
 print(face64)
+
+
+i = 0
+for imgin in r"C:\Users\ldann\Downloads\img_in\jeffrey\*.JPG":
+    print(imgin)
+    imgout = r"C:\Users\ldann\Downloads\img_out\jeffrey\img" + str(i) + ".jpg"
+    saveFaceImage(imgin, imgout, "Jeffrey")
+    print(imgout)
+    i += 1
+
